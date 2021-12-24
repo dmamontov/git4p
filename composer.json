@@ -1,5 +1,5 @@
 {
-    "name": "git4p/git4p",
+    "name": "dmamontov/git4p",
     "description": "A native PHP git library",
     "keywords": ["native", "php", "git", "repository"],
     "type": "library",
