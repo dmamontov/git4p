@@ -62,7 +62,7 @@ class Git {
             $content = gzcompress($content);
         }
 
-        $result = file_put_contents($path, $content, LOCK_EX);
+        $result = file_put_contents($path, $content);
         if ($result === false) {
             throw new Exception('Unable to write to file '.$path);
         }
