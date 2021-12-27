@@ -50,8 +50,9 @@ class GitTree extends GitObject {
     public function data() {
         $data = '';
 
-        uasort($this->entries(), 'self::compare');
-        foreach ($this->entries() as $name => $entry) {
+        $entries = $this->entries();
+        uasort($entries, 'self::compare');
+        foreach ($entries as $name => $entry) {
             $data .= sprintf("%s %s\0%s", $entry->mode(), $name, Git::sha2bin($entry->sha()));
         }
 
