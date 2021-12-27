@@ -32,7 +32,8 @@ class GitRef {
             $line = strtok($file, "\n");
             while ($line !== false) {
                 $line = trim($line);
-                if ($line{0} != '#' && $line{0} != '^') {
+                $first = substr($line, 0, 1);
+                if ($first != '#' && $first != '^') {
                     if (strpos($line, ' ') == 40)
                         $refs[substr($line, 46)] = substr($line, 0, 40);
                 }
